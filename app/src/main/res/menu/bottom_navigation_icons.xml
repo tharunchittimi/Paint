@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="ifRoom"
+        android:title="Home">
+    </item>
+    <item
+        android:id="@+id/nav_catalog"
+        android:icon="@drawable/ic_catalog"
+        app:showAsAction="ifRoom"
+        android:title="Catalouge">
+    </item>
+    <item
+        android:id="@+id/nav_camera"
+        android:icon="@drawable/ic_cemara"
+        app:showAsAction="ifRoom"
+        android:title="Scan">
+    </item>
+    <item
+        android:id="@+id/nav_cost"
+        android:icon="@drawable/ic_cost"
+        app:showAsAction="ifRoom"
+        android:title="Cost">
+    </item>
+    <item
+        android:id="@+id/nav_person"
+        android:icon="@drawable/ic_person"
+        app:showAsAction="ifRoom"
+        android:title="Profile">
+    </item>
+</menu>

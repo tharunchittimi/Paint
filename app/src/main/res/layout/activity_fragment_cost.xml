@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <TextView
+            android:id="@+id/Txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="Select Space"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCost"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            app:cardCornerRadius="@dimen/dp40"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/Txt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Interior"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp14" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCost1"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp30"
+            app:cardCornerRadius="@dimen/dp40"
+            app:layout_constraintBottom_toBottomOf="@+id/cardCost"
+            app:layout_constraintStart_toEndOf="@id/cardCost"
+            app:layout_constraintTop_toBottomOf="@id/Txt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Exterior"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp14" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/Txt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Select No of BHK"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/cardCost" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:max="100"
+            android:progressTint="@color/orange"
+            android:progressBackgroundTint="@color/light_grey"
+            android:thumbTint="@color/actBar"
+            android:outlineSpotShadowColor="@color/White"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/Txt1" />
+
+        <TextView
+            android:id="@+id/Txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="1BHK"
+            android:layout_marginLeft="@dimen/dp15"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/seekbar" />
+
+        <TextView
+            android:id="@+id/Txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp30"
+            android:text="2BHK"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toEndOf="@id/Txt2"
+            app:layout_constraintTop_toBottomOf="@id/seekbar"
+            app:layout_constraintTop_toTopOf="@id/Txt2" />
+
+        <TextView
+            android:id="@+id/Txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginTop="8dp"
+            android:text="3 BHK"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toEndOf="@id/Txt3"
+            app:layout_constraintTop_toBottomOf="@id/seekbar"
+            android:layout_marginStart="@dimen/dp30" />
+
+        <TextView
+            android:id="@+id/Txt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginTop="8dp"
+            android:text="+4BHK"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toEndOf="@id/Txt4"
+            app:layout_constraintTop_toBottomOf="@id/seekbar" />
+
+        <TextView
+            android:id="@+id/Txt6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="Carpet Area"
+            android:textColor="@color/actBar"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/Txt2" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:thumbTint="@color/actBar"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:backgroundTint="@color/light_grey"
+            app:layout_constraintStart_toEndOf="@id/Txt6"
+            app:layout_constraintTop_toTopOf="@id/Txt6" />
+
+        <TextView
+            android:id="@+id/Txtt6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="Build Up Area"
+            android:textColor="@color/greyBrown"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintStart_toEndOf="@id/switch1"
+            app:layout_constraintTop_toBottomOf="@id/Txt5" />
+
+        <TextView
+            android:id="@+id/Txt7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="Select Process"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/Txt6" />
+
+        <TextView
+            android:id="@+id/Txt8"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp65"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@drawable/border"
+            android:padding="@dimen/dp10"
+            android:text="Fresh Painting"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/Txt7" />
+
+        <TextView
+            android:id="@+id/Txt9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp23"
+            android:padding="@dimen/dp10"
+            android:textSize="@dimen/sp13"
+            android:text="2 Coats Putty + 1 Coat Primer + 2 Coat Paint"
+            android:textColor="@color/Black"
+            app:layout_constraintStart_toStartOf="@id/Txt8"
+            app:layout_constraintTop_toTopOf="@id/Txt8" />
+
+        <TextView
+            android:id="@+id/Txt10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp65"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@drawable/border2"
+            android:padding="@dimen/dp10"
+            android:text="Repainting"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/Txt8" />
+
+        <TextView
+            android:id="@+id/Txt11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp23"
+            android:padding="@dimen/dp10"
+            android:textSize="@dimen/sp13"
+            android:textColor="@color/light_grey"
+            android:text="Touch Up Putty + 1 Coat Primer + 2 Coat Paint"
+            app:layout_constraintStart_toStartOf="@id/Txt10"
+            app:layout_constraintTop_toTopOf="@id/Txt10" />
+
+        <TextView
+            android:id="@+id/Txt12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="Choose Paint"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/guideline5"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/Txt10" />
+
+        <TextView
+            android:id="@+id/Txtt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/border"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingTop="@dimen/dp5"
+            android:paddingRight="@dimen/dp15"
+            android:paddingBottom="@dimen/dp5"
+            android:text="Economy"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@id/Txt12" />
+
+        <TextView
+            android:id="@+id/Txtt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp8"
+            android:background="@drawable/border1"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingTop="@dimen/dp5"
+            android:paddingRight="@dimen/dp15"
+            android:paddingBottom="@dimen/dp5"
+            android:text="Luxury"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintTop_toTopOf="@id/Txtt"
+            app:layout_constraintStart_toEndOf="@id/Txtt"
+            app:layout_constraintTop_toBottomOf="@id/Txt12" />
+
+        <TextView
+            android:id="@+id/Txtt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp8"
+            android:background="@drawable/border1"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingTop="@dimen/dp5"
+            android:paddingRight="@dimen/dp15"
+            android:paddingBottom="@dimen/dp5"
+            android:text="Premium"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintTop_toTopOf="@id/Txtt1"
+            app:layout_constraintStart_toEndOf="@id/Txtt1"
+            app:layout_constraintTop_toBottomOf="@id/Txt12" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/costBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="@dimen/dp300"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginTop="@dimen/dp20"
+            app:cornerRadius="@dimen/dp8"
+            android:background="@color/light_blue"
+            android:text="Next"
+            android:textColor="@color/White"
+            android:textSize="@dimen/sp14"
+            app:backgroundTint="@color/light_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Txtt1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

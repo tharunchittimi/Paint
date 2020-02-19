@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/light_grey</item>
+        <item name="colorAccent">@color/Black</item>
+    </style>
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+    </style>
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/actBar</item>
+    <item name="colorPrimaryDark">@color/theme2</item>
+    <item name="colorAccent">@color/Black</item>
+    </style>
+
+    <style name="AppThemePayment" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/actBar</item>
+        <item name="colorPrimaryDark">@color/theme2</item>
+        <item name="colorAccent">@color/White</item>
+    </style>
+</resources>

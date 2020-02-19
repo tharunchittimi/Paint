@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolBarUserDetails"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".UserDetails">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp6">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@drawable/ic_icperson"
+                        android:drawableLeft="@drawable/ic_icperson"
+                        android:drawablePadding="@dimen/dp10"
+                        android:hint="Name"
+                        android:inputType="textCapSentences" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@drawable/ic_mail"
+                        android:drawableLeft="@drawable/ic_mail"
+                        android:drawablePadding="@dimen/dp10"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:drawableLeft="@drawable/ic_phone"
+                        android:drawablePadding="@dimen/dp10"
+                        android:hint="Phone"
+                        android:inputType="phone" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:drawableEnd="@drawable/ic_loc"
+                        android:drawableRight="@drawable/ic_loc"
+                        android:drawablePadding="@dimen/dp10"
+                        android:hint="Where ?"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/TxtView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                android:text="Schedule Appoinment"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp18"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/idCard"
+                app:layout_constraintTop_toBottomOf="@id/idCard" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="Date"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintStart_toStartOf="@id/TxtView"
+                app:layout_constraintTop_toBottomOf="@id/TxtView" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp5"
+                android:text="Weekday"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TxtView" />
+
+            <Switch
+                android:id="@+id/switch11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:backgroundTint="@color/light_grey"
+                android:textOff="OFF"
+                android:textOn="ON"
+                android:thumbTint="@color/actBar"
+                app:layout_constraintBottom_toBottomOf="@id/textView23"
+                app:layout_constraintStart_toEndOf="@id/textView23"
+                app:layout_constraintTop_toBottomOf="@id/TxtView"
+                app:layout_constraintTop_toTopOf="@id/textView23" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:text="Weekend"
+                android:textColor="@color/light_grey"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintBottom_toBottomOf="@id/switch11"
+                app:layout_constraintStart_toEndOf="@id/switch11"
+                app:layout_constraintTop_toBottomOf="@id/TxtView"
+                app:layout_constraintTop_toTopOf="@id/switch11" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/border1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView22"
+                app:layout_constraintTop_toBottomOf="@id/textView23" />
+
+            <ImageView
+                android:id="@+id/imageView26"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp27"
+                android:src="@drawable/ic_date"
+                app:layout_constraintStart_toStartOf="@id/textView22"
+                app:layout_constraintTop_toBottomOf="@id/textView22" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text="Sep 25, 2019"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintStart_toEndOf="@id/imageView26"
+                app:layout_constraintTop_toTopOf="@id/imageView26" />
+
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp27"
+                android:layout_marginRight="@dimen/dp25"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/textView23" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="Time"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/border1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView27"
+                app:layout_constraintTop_toBottomOf="@id/textView27" />
+
+            <ImageView
+                android:id="@+id/imageView28"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp27"
+                android:src="@drawable/ic_clock"
+                app:layout_constraintStart_toStartOf="@id/view1"
+                app:layout_constraintTop_toBottomOf="@id/textView27" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text="10:00 AM"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintStart_toEndOf="@id/imageView28"
+                app:layout_constraintTop_toTopOf="@id/imageView28" />
+
+            <ImageView
+                android:id="@+id/imageView29"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp25"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/textView28" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnn11"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/light_blue"
+                android:text="Confirm Details"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp16"
+                app:backgroundTint="@color/light_blue"
+                app:cornerRadius="@dimen/dp8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

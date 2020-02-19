@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolBarPayment"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/childFrag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp20">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="Pay Rs 6,500.00"
+                android:textColor="@color/actBar"
+                android:textSize="@dimen/sp22"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.06" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="Apply Coupon Code"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/textView24" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp20"
+                android:backgroundTint="@color/actBar"
+                android:drawableEnd="@drawable/ic_circle"
+                android:drawableRight="@drawable/ic_circle"
+                android:hint="Enter Coupon Code"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/textView29" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp35"
+                android:text="Payment Method"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/editText" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:text="Select payment method or Add a payment Method"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/textView30" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/ic_add"
+                app:layout_anchor="@id/textView30"
+                app:layout_anchorGravity="bottom|right|end"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintTop_toBottomOf="@id/editText" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/textView31">
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/gpay" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/idCard1">
+
+                <ImageView
+                    android:id="@+id/imageView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/phnpe" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/idCard2">
+
+                <ImageView
+                    android:id="@+id/imageView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/paytm" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/idCard3">
+
+                <ImageView
+                    android:id="@+id/imageView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/bhim" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/idCard4">
+
+                <ImageView
+                    android:id="@+id/imageView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/pybhim" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/idCard5">
+
+                <ImageView
+                    android:id="@+id/imageView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/paypal" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/idCard6">
+
+                <ImageView
+                    android:id="@+id/imageView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/freecharge" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/idCard7">
+
+                <ImageView
+                    android:id="@+id/imageView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/amazon" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCard9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp20"
+                app:cardCornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline9"
+                app:layout_constraintStart_toStartOf="@id/guideline8"
+                app:layout_constraintTop_toBottomOf="@id/idCard8">
+
+                <ImageView
+                    android:id="@+id/imageView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/airtel" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnn111"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/light_blue"
+                android:text="Proceed"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp16"
+                app:backgroundTint="@color/light_blue"
+                app:cornerRadius="@dimen/dp8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idCard9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

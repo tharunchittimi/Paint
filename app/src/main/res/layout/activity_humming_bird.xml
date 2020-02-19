@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolBarHumming"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".HummingBird">
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/ratingBarHumming"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp8"
+                android:numStars="5"
+                android:progressTint="@color/gold"
+                android:rating="4"
+                android:scaleX="1.7"
+                android:scaleY="1.7"
+                android:stepSize="1.0"
+                app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/imageView15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp6"
+                android:text="Flower Mandala add extra calmness, serenity, and beauty to a living room .  Our extra large Flower Mandala are remarkable and reusable wall art components unlike wallpapers and stickers."
+                android:textColor="@color/Black"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/ratingBarHumming" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_marginBottom="@dimen/dp18"
+                app:layout_constraintBottom_toTopOf="@id/textView9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/heart" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:layout_marginRight="@dimen/dp10"
+                android:src="@drawable/ic_cam"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/textView9" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp40"
+                android:text="Size(WxH)"
+                android:textSize="@dimen/sp12"
+                app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/textView9" />
+
+            <SeekBar
+                android:id="@+id/seekbar1"
+                android:layout_width="@dimen/dp250"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressBackgroundTint="@color/light_grey"
+                android:progressTint="@color/orange"
+                android:thumbTint="@color/actBar"
+                app:layout_constraintEnd_toEndOf="@id/imageView16"
+                app:layout_constraintLeft_toRightOf="@id/textView10"
+                app:layout_constraintTop_toTopOf="@id/textView10" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:text="4ftx1ft \n(Small)"
+                android:textColor="@color/actBar"
+                app:layout_constraintStart_toStartOf="@id/seekbar1"
+                app:layout_constraintTop_toBottomOf="@id/seekbar1" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp65"
+                android:text="6ftx2ft \n(Small)"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/seekbar1" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp40"
+                android:text="6ftx2ft \n(Small)"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toEndOf="@id/textView12"
+                app:layout_constraintTop_toBottomOf="@id/seekbar1" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp15"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp40"
+                app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/textView11"
+                app:srcCompat="@drawable/rupee" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6500"
+                android:textColor="@color/actBar"
+                android:textSize="@dimen/sp22"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/imageView18"
+                app:layout_constraintLeft_toRightOf="@id/imageView18"
+                app:layout_constraintTop_toTopOf="@id/imageView18" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn22"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@color/light_blue"
+                android:text="Book"
+                android:textColor="@color/White"
+                android:textSize="@dimen/sp14"
+                app:backgroundTint="@color/light_blue"
+                app:cornerRadius="@dimen/dp8"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/textView14"
+                app:layout_constraintTop_toBottomOf="@id/textView13" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
