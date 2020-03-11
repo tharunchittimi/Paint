@@ -12,52 +12,52 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Confirmation"
+        <activity android:name=".confirmationscreen.Confirmation"
             android:theme="@style/AppThemePayment">
 
         </activity>
         <activity
-            android:name=".Payment"
+            android:name=".paymentscreen.Payment"
             android:theme="@style/AppThemePayment"
             android:launchMode="singleTask">
 
         </activity>
         <activity
-            android:name=".UserDetails"
+            android:name=".userprofile.UserDetails"
             android:theme="@style/AppTheme2"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".Checkout"
+            android:name=".checkoutitem.Checkout"
             android:theme="@style/AppTheme2"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".Cart"
+            android:name=".cartitem.Cart"
             android:theme="@style/AppTheme2"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".ScanProduct"
+            android:name=".scanproduct.ScanProduct"
             android:theme="@style/AppTheme2"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".HummingBird"
+            android:name=".hummingbirdscreen.HummingBird"
             android:theme="@style/AppTheme2"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".WallArt"
+            android:name=".wallartscreen.WallArt"
             android:theme="@style/AppTheme2"
             android:launchMode="singleTask"/>
-        <activity android:name=".FragmentHome"
+        <activity android:name=".dashboardfragments.fragmenthome.FragmentHome"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".HomeScreen"
+            android:name=".dashboard.HomeScreen"
             android:theme="@style/AppTheme2"
             android:launchMode="singleTask">
 
         </activity>
-        <activity android:name=".OtpActivity"
+        <activity android:name=".otpscreen.OtpActivity"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".HomeActivity"
+            android:name=".splashscreen.HomeActivity"
             android:theme="@style/AppTheme1"
             android:launchMode="singleTask">
             <intent-filter>
@@ -67,12 +67,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUp"
+            android:name=".signup.SignUp"
             android:launchMode="singleTask" />
         <activity
-            android:name=".Login"
+            android:name=".login.Login"
             android:launchMode="singleTask" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".onboardingscreen.MainActivity" >
 
 
         </activity>
